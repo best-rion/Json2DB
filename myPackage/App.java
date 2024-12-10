@@ -6,12 +6,12 @@ public class App
 {
     public static void main(String[] args)
     {
-        String jsonContent = Json.jsonToString("/home/hossain/Desktop/Ecommerce/SideProjects/JsonToDB/myPackage/watches.json");
+        String jsonContent = Json.jsonToString("/home/hossain/Downloads/Json2DB-main/myPackage/watches.json");
         Product[] products = Json.getProducts(jsonContent);
 
         try {
 
-            String statement = "INSERT INTO "+DBInfo.table+" (brand, name, price, stock, pic_url) "
+            String statement = "INSERT INTO "+DBInfo.table+" (brand_name, product_name, price, stock, pic_url) "
                                 + "VALUES (?,?,?,?,?)";
 
             // 1. Get a connection to database
